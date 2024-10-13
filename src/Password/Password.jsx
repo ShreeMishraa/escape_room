@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../assets/bg.avif';
+import backgroundImage from '/assets/bg.avif';
 import { motion } from 'framer-motion';
 
 const Password = () => {
@@ -32,21 +32,21 @@ const Password = () => {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen p-4"
+      className="flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8 lg:p-10"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-red-950 bg-opacity-85 p-8 w-full max-w-md rounded-lg shadow-lg">
+      <div className="bg-red-950 bg-opacity-85 p-4 sm:p-6 md:p-8 w-full max-w-md rounded-lg shadow-lg">
         <div className="flex flex-col items-center w-full mb-2">
           <div className="w-full mb-4">
-            <img src="../src/assets/password.jpg" alt="Password illustration" className="w-full rounded-md opacity-90" />
+            <img src="/assets/password.jpg" alt="Password illustration" className="w-full rounded-md opacity-90" />
           </div>
           <div className="w-full mb-4">
             <div className="flex items-center mb-4">
-              <div className="text-white bg-red-900 px-4 text-center py-3 mr-5 rounded-lg opacity-85">
+              <div className="text-white bg-red-900 px-2 sm:px-4 text-center py-2 sm:py-3 mr-2 sm:mr-5 rounded-lg opacity-85">
                 <h1>{currentDate}</h1>
               </div>
               <div className="flex-1">
@@ -54,7 +54,7 @@ const Password = () => {
                 <input
                   type="password"
                   id="password"
-                  className="w-full px-0 py-2.5 bg-zinc-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-opacity-50 text-center"
+                  className="w-full px-0 py-2 sm:py-2.5 bg-zinc-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-opacity-50 text-center"
                   placeholder="Write what you see to begin!"
                   onChange={showBeginButton}
                 />

@@ -114,8 +114,8 @@ function Level2() {
                     ~Unlock the door to escape~
                 </h1>
             </div>
-            <div className='flex h-full bg-black'>
-                <div className='w-2/3 bg-black grid grid-cols-2 grid-rows-3'>
+            <div className='flex flex-col md:flex-row h-full bg-black'>
+                <div className='w-full md:w-2/3 bg-black grid grid-cols-1 md:grid-cols-2 grid-rows-3'>
                     <div id='1' className='bg-gray-500 border shadow-lg rounded-lg opacity-70 p-4'>
                         <h1 className='font-bold text-xl'>
                             Of all the six objects you found in the previous level, which one has the same first letter as something that can unlock the door?
@@ -157,8 +157,8 @@ function Level2() {
                             )}
                         </Toggled>
                     </div>
-                    <div className='bg-black p-4'></div>
-                    <div className='bg-black p-4'></div>
+                    <div className='hidden md:block bg-black p-4'></div>
+                    <div className='hidden md:block bg-black p-4'></div>
                     <div
                         id='2'
                         className='bg-gray-500 border shadow-lg rounded-lg opacity-70 p-4'
@@ -251,8 +251,8 @@ function Level2() {
                     </div>
                     <div className='bg-black p-4'></div>
                 </div>
-                <div className='w-1/3 h-full bg-black'>
-                    <img src="../src/assets/escape.jpg" alt="door" />
+                <div className='w-full md:w-1/3 h-full bg-black'>
+                    <img src="assets/escape.jpg" alt="door" />
                 </div>
             </div>
             {confettiActive && (

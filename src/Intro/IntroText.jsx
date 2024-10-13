@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import backgroundImage from '../assets/background.jpg';
+import backgroundImage from '/assets/background.jpg';
 
 
 const IntroText = ({ onIntroEnd }) => {

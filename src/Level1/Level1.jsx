@@ -2,7 +2,6 @@ import React, { useState, useEffect, navigate } from 'react';
 import { gsap } from 'gsap';
 import "../Level1/Level1.css";
 import { useNavigate } from 'react-router-dom';
-import Toggle from 'react-toggled';
 
 function Level1() {
     const [visibleCards, setVisibleCards] = useState({
@@ -26,18 +25,18 @@ function Level1() {
     const navigate = useNavigate();
 
     const cardItems = [
-        { id: 'books', img: "../src/assets/books.jpg", alt: "Books" },
-        { id: 'nun1', img: "../src/assets/nun.webp", alt: "Nun 1" },
-        { id: 'hat', img: "../src/assets/hat.jpg", alt: "Hat" },
-        { id: 'clown1', img: "../src/assets/clown.jpg", alt: "Clown 1" },
-        { id: 'knife', img: "../src/assets/knife.jpg", alt: "Knife" },
-        { id: 'axe', img: "../src/assets/axe.jpg", alt: "Axe" },
-        { id: 'gun', img: "../src/assets/gun.png", alt: "Gun" },
-        { id: 'nun2', img: "../src/assets/nun.webp", alt: "Nun 2" },
-        { id: 'clown2', img: "../src/assets/clown.jpg", alt: "Clown 2" },
-        { id: 'cross', img: "../src/assets/cross.avif", alt: "Cross" },
-        { id: 'nun3', img: "../src/assets/nun.webp", alt: "Nun 3" },
-        { id: 'clown3', img: "../src/assets/clown.jpg", alt: "Clown 3" },
+        { id: 'books', img: "/assets/books.jpg", alt: "Books" },
+        { id: 'nun1', img: "/assets/nun.webp", alt: "Nun 1" },
+        { id: 'hat', img: "/assets/hat.jpg", alt: "Hat" },
+        { id: 'clown1', img: "/assets/clown.jpg", alt: "Clown 1" },
+        { id: 'knife', img: "/assets/knife.jpg", alt: "Knife" },
+        { id: 'axe', img: "/assets/axe.jpg", alt: "Axe" },
+        { id: 'gun', img: "/assets/gun.png", alt: "Gun" },
+        { id: 'nun2', img: "/assets/nun.webp", alt: "Nun 2" },
+        { id: 'clown2', img: "/assets/clown.jpg", alt: "Clown 2" },
+        { id: 'cross', img: "/assets/cross.avif", alt: "Cross" },
+        { id: 'nun3', img: "/assets/nun.webp", alt: "Nun 3" },
+        { id: 'clown3', img: "/assets/clown.jpg", alt: "Clown 3" },
     ];
 
     const shuffleArray = (array) => {
@@ -181,12 +180,12 @@ function Level1() {
     return (
         <div className='w-full h-full bg-black'>
             <div className='bg-red-900'>
-                <h1 className='font-serif font-bold text-white text-4xl py-3 text-center'>Can you find all the objects?</h1>
+                <h1 className='font-serif font-bold text-white text-2xl md:text-4xl py-3 text-center'>Can you find all the objects?</h1>
             </div>
-            <div className='grid grid-cols-4 gap-4 p-4 h-4/5'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-4 h-4/5'>
                 
                 {shuffledCards.map(card => (
-                    <div className='bg-gray-500 rounded-lg flex justify-center items-center h-60' onClick={() => handleClick(card.id)} key={card.id}>
+                    <div className='bg-gray-500 rounded-lg flex justify-center items-center h-40 md:h-60' onClick={() => handleClick(card.id)} key={card.id}>
                         <img
                             className={`h-full w-full object-cover ${visibleCards[card.id] ? 'block' : 'hidden'}`}
                             src={card.img}
@@ -197,12 +196,12 @@ function Level1() {
             </div>
 
             <div className={`bg-black h-screen w-full flex flex-col justify-center items-center ${inputVisible ? 'flex' : 'hidden'}`}>
-                <h1 className=' text-white text-4xl font-bold mb-4' style={{ display: showButton ? 'block' : 'none' }}>Congratulations!!!</h1>
-                <div className='px-10 flex flex-col items-center space-y-4'>
+                <h1 className=' text-white text-2xl md:text-4xl font-bold mb-4' style={{ display: showButton ? 'block' : 'none' }}>Congratulations!!!</h1>
+                <div className='px-4 md:px-10 flex flex-col items-center space-y-4'>
                     {inputVisible && (
                         <input
                             type='text'
-                            className='py-2 px-8 bg-gray-500 text-white rounded-md mb-4'
+                            className='py-2 px-4 md:px-8 bg-gray-500 text-white rounded-md mb-4'
                             id='placeholder'
                             placeholder='How many objects found?'
                             onChange={handleNextLevel}

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import videoSrc from '../assets/stuck.mp4'; 
+import videoSrc from '/assets/stuck.mp4'; 
 import { motion } from 'framer-motion';
 
 const AsylumVideo = ({ onVideoEnd }) => {
