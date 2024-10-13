@@ -38,7 +38,7 @@ function GameOver() {
                     </button>
                     <button 
                         className="bg-pink-600 hover:bg-pink-500 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
-                        onClick={() => openLink('https://github.com/shree-mishra')}
+                        onClick={() => openLink('https://github.com/ShreeMishraa')}
                     >
                         GitHub
                     </button>
