@@ -1,0 +1,29 @@
+.confetti {
+    width: 7px;
+    height: 12px;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 10; 
+}
+
+@media (max-width: 600px) {
+    .confetti {
+        width: 5px;
+        height: 10px;
+    }
+
+    .confetti-container {
+        width: 100%;
+        height: 100%;
+    }
+}
